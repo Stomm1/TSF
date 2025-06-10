@@ -27,26 +27,13 @@
 
     header {
       background-color: var(--blue);
-      color: var(--white);
       padding: 1.5rem 2rem;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      letter-spacing: 2px;
       text-align: center;
-      flex: 1;
     }
 
     header img {
-      position: absolute;
-      right: 20px;
-      width: 150px;
+      width: 160px;
       height: auto;
     }
 
@@ -79,36 +66,27 @@
       padding: 0 1rem;
     }
 
-    .welcome-section {
+    .welcome-section, .info, .socials {
       background-color: var(--white);
       border-radius: 8px;
       padding: 2rem;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      text-align: center;
       margin-bottom: 2rem;
+    }
+
+    .welcome-section h2,
+    .info h3,
+    .socials h3 {
+      margin-bottom: 1rem;
     }
 
     .welcome-section h2 {
       color: var(--orange);
-      margin-bottom: 1rem;
       font-size: 2rem;
-    }
-
-    .welcome-section p {
-      font-size: 1.2rem;
-    }
-
-    .info {
-      background-color: var(--white);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
     }
 
     .info h3 {
       color: var(--blue);
-      margin-bottom: 1rem;
       font-size: 1.8rem;
       border-bottom: 3px solid var(--orange);
       padding-bottom: 0.5rem;
@@ -120,6 +98,34 @@
       font-size: 1.1rem;
     }
 
+    .socials h3 {
+      color: var(--orange);
+      font-size: 1.8rem;
+    }
+
+    .socials a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
+      background-color: var(--blue);
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .socials a:hover {
+      background-color: var(--orange);
+    }
+
+    .socials img {
+      width: 24px;
+      height: 24px;
+    }
+
     footer {
       background-color: var(--blue);
       color: var(--white);
@@ -129,24 +135,13 @@
     }
 
     @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      header img {
-        position: static;
-        margin-top: 1rem;
-        width: 120px;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
       nav {
         flex-direction: column;
         gap: 1rem;
+      }
+
+      header img {
+        width: 120px;
       }
     }
   </style>
@@ -154,7 +149,6 @@
 <body>
 
   <header>
-    <h1>Trollhättans Squash Förening</h1>
     <img src="TSF-Emblem.jpg" alt="TSF Logotyp">
   </header>
 
@@ -196,6 +190,14 @@
       <p>Telefon: 073 395 33 44</p>
       <p>Adress: Sandviksvägen 6, 461 70 Trollhättan</p>
     </section>
+
+    <section class="socials">
+      <h3>Följ oss på sociala medier</h3>
+      <a href="https://www.instagram.com/trollhattansquashforening" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram logga">
+        @trollhattansquashforening
+      </a>
+    </section>
   </main>
 
   <footer>
@@ -204,4 +206,3 @@
 
 </body>
 </html>
-
