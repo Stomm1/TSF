@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -6,10 +7,10 @@
   <title>Trollhättans Squash Förening</title>
   <style>
     :root {
-      --blue: #0047AB;      /* Stark blå */
-      --orange: #FF6600;    /* Klar orange */
+      --blue: #0047AB;
+      --orange: #FF6600;
       --white: #ffffff;
-      --bg-light: #f4faff;  /* Ljus blåvit bakgrund */
+      --bg-light: #f4faff;
     }
 
     * {
@@ -29,18 +30,20 @@
       background-color: var(--blue);
       color: var(--white);
       padding: 1.5rem 2rem;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
     }
 
     header img.logo {
       height: 60px;
-      margin-bottom: 0.5rem;
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-      letter-spacing: 2px;
+      margin-left: 1rem;
     }
 
     nav {
@@ -121,8 +124,16 @@
       font-size: 0.9rem;
     }
 
-    /* Responsivt */
     @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header img.logo {
+        margin: 1rem 0 0 0;
+      }
+
       nav {
         flex-direction: column;
         gap: 1rem;
@@ -137,8 +148,8 @@
 <body>
 
   <header>
-    <img src="TSF-Emblem.jpg" alt="TSF logotyp" class="logo">
     <h1>Trollhättans Squash Förening</h1>
+    <img src="TSF-Emblem.jpg" alt="TSF logotyp" class="logo">
   </header>
 
   <nav>
