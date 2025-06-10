@@ -2,9 +2,182 @@
 <html lang="sv">
 <head>
   <meta charset="UTF-8" />
-  <title>TSF-hemsida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trollhättans Squash Förening</title>
+  <style>
+    :root {
+      --blue: #0047AB;      /* Stark blå */
+      --orange: #FF6600;    /* Klar orange */
+      --white: #ffffff;
+      --bg-light: #f4faff;  /* Ljus blåvit bakgrund */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--blue);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--blue);
+      color: var(--white);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      background-color: var(--orange);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background-color: var(--white);
+      color: var(--orange);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .welcome-section {
+      background-color: var(--white);
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .welcome-section h2 {
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .welcome-section p {
+      font-size: 1.2rem;
+    }
+
+    .info {
+      background-color: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .info h3 {
+      color: var(--blue);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      border-bottom: 3px solid var(--orange);
+      padding-bottom: 0.5rem;
+    }
+
+    .info ul {
+      list-style: inside square;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      background-color: var(--blue);
+      color: var(--white);
+      text-align: center;
+      padding: 1.2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsivt */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Välkommen till TSF-hemsidan!</h1>
+
+  <header>
+    <h1>Trollhättans Squash Förening</h1>
+  </header>
+
+  <nav>
+    <a href="#welcome">Hem</a>
+    <a href="#about">Om Oss</a>
+    <a href="#activities">Aktiviteter</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <main>
+    <section id="welcome" class="welcome-section">
+      <h2>Välkommen till Trollhättans Squash Förening!</h2>
+      <p>Vi är en passionerad squashförening som välkomnar spelare i alla åldrar och nivåer. Kom och spela med oss, utveckla din teknik och ha kul!</p>
+    </section>
+
+    <section id="about" class="info">
+      <h3>Om Oss</h3>
+      <p>Trollhättans Squash Förening grundades 1998 och har sedan dess arbetat för att sprida squashsporten i Trollhättan med omnejd.</p>
+      <ul>
+        <li>Träning för nybörjare och avancerade</li>
+        <li>Tävlingar och turneringar året runt</li>
+        <li>Sociala event och klubbkvällar</li>
+      </ul>
+    </section>
+
+    <section id="activities" class="info">
+      <h3>Aktiviteter</h3>
+      <ul>
+        <li>Veckoträningar med erfarna coacher</li>
+        <li>Juniorverksamhet för barn och ungdomar</li>
+        <li>Klubbmästerskap och vänskapsmatcher</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="info">
+      <h3>Kontakt</h3>
+      <p>E-post: <a href="mailto:info@trollhattanssquash.se">info@trollhattanssquash.se</a></p>
+      <p>Telefon: 070-123 45 67</p>
+      <p>Adress: Squashhallen, Trollhättan Sportcenter</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Trollhättans Squash Förening – Alla rättigheter reserverade
+  </footer>
+
 </body>
 </html>
