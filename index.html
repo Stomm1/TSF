@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -30,20 +29,25 @@
       background-color: var(--blue);
       color: var(--white);
       padding: 1.5rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
     header h1 {
-      font-size: 2.5rem;
-      letter-spacing: 1px;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+      text-align: center;
+      flex: 1;
     }
 
-    header img.logo {
-      height: 60px;
-      margin-left: 1rem;
+    header img {
+      position: absolute;
+      right: 20px;
+      width: 150px;
+      height: auto;
     }
 
     nav {
@@ -130,17 +134,19 @@
         text-align: center;
       }
 
-      header img.logo {
-        margin: 1rem 0 0 0;
+      header img {
+        position: static;
+        margin-top: 1rem;
+        width: 120px;
+      }
+
+      header h1 {
+        font-size: 2rem;
       }
 
       nav {
         flex-direction: column;
         gap: 1rem;
-      }
-
-      header h1 {
-        font-size: 2rem;
       }
     }
   </style>
@@ -149,7 +155,7 @@
 
   <header>
     <h1>Trollhättans Squash Förening</h1>
-    <img src="TSF-Emblem.jpg" alt="TSF logotyp" class="logo">
+    <img src="TSF-Emblem.jpg" alt="TSF Logotyp">
   </header>
 
   <nav>
@@ -186,7 +192,7 @@
 
     <section id="contact" class="info">
       <h3>Kontakt</h3>
-      <p>E-post: <a href="mailto:info@trollhattanssquash.se">trollhattansquashforening@gmail.com</a></p>
+      <p>E-post: <a href="mailto:trollhattansquashforening@gmail.com">trollhattansquashforening@gmail.com</a></p>
       <p>Telefon: 073 395 33 44</p>
       <p>Adress: Sandviksvägen 6, 461 70 Trollhättan</p>
     </section>
@@ -195,5 +201,7 @@
   <footer>
     &copy; 2025 Trollhättans Squash Förening – Alla rättigheter reserverade
   </footer>
+
 </body>
 </html>
+
